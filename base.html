@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BROKEN SCREEN SIMULATOR 3000 - EXTREME FIX</title>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        /* Broken screen effect */
+        .broken-screen {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: 
+                repeating-linear-gradient(90deg, 
+                    transparent, 
+                    transparent 2px, 
+                    rgba(255,0,0,0.03) 2px, 
+                    rgba(255,0,0,0.03) 4px
+                ),
+                repeating-linear-gradient(0deg, 
+                    transparent, 
+                    transparent 2px, 
+                    rgba(0,255,255,0.03) 2px, 
+                    rgba(0,255,255,0.03) 4px
+                );
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .glitch-text {
+            color: #0f0;
+            text-shadow: 2px 2px 0 #f0f, -2px -2px 0 #00f;
+            animation: glitch 0.5s infinite;
+            font-size: 24px;
+            margin: 20px;
+            position: relative;
+            z-index: 100;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        /* BEBROKAUH CHECKBOXES - EXTREME FIX */
+        .bebrokauh-container {
+            position: absolute;
+            top: 80px;
+            left: 30px;
+            background: rgba(0,0,0,0.9);
+            padding: 20px;
+            border: 3px solid lime;
+            border-radius: 10px;
+            z-index: 100;
+        }
+
+        .bebrokauh-label {
+            color: lime;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: block;
+            font-weight: bold;
+        }
+
+        .bebrokauh-check {
+            width: 15px;
+            height: 15px;
+            margin: 10px;
+            accent-color: cyan;
+            transform: scale(1.5);
+            display: inline-block;
+        }
+
+        .checkbox-row {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        /* EXTREME SIMPLE PARART - CAN'T MISS IT */
+        .parrot {
+            position: absolute;
+            top: 120px;
+            right: 50px;
+            z-index: 100;
+            transform: scale(1.5);
+        }
+
+        .parrot-body {
+            width: 100px;
+            height: 60px;
+            background: #00ff00;
+            border-radius: 50%;
+            position: relative;
+            border: 3px solid #00cc00;
+        }
+
+        .parrot-head {
+            width: 40px;
+            height: 40px;
+            background: #00cc00;
+            border-radius: 50%;
+            position: absolute;
+            top: -25px;
+            left: -15px;
+            border: 2px solid #009900;
+        }
+
+        .parrot-beak {
+            width: 15px;
+            height: 8px;
+            background: #ff6600;
+            position: absolute;
+            top: 15px;
+            left: -12px;
+            border-radius: 50% 0 0 50%;
+        }
+
+        .parrot-eye {
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: -5px;
+            border: 2px solid black;
+        }
+
+        .parrot-wing {
+            width: 50px;
+            height: 30px;
+            background: #00aa00;
+            border-radius: 50%;
+            position: absolute;
+            top: 15px;
+            left: 30px;
+        }
+
+        .parrot-tail {
+            width: 20px;
+            height: 40px;
+            background: #008800;
+            border-radius: 0 50% 50% 0;
+            position: absolute;
+            top: 30px;
+            left: 90px;
+        }
+
+        /* Footer with 10 H1s */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #222;
+            padding: 15px;
+            border-top: 4px dashed red;
+            z-index: 100;
+        }
+
+        footer h1 {
+            font-size: 14px;
+            color: cyan;
+            margin: 3px 0;
+            text-transform: uppercase;
+            animation: colorCycle 2s infinite;
+            font-weight: bold;
+        }
+
+        @keyframes colorCycle {
+            0% { color: cyan; }
+            33% { color: magenta; }
+            66% { color: yellow; }
+            100% { color: cyan; }
+        }
+
+        /* DEBUG OVERLAY - TEMPORARY */
+        .debug-info {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: lime;
+            padding: 10px;
+            border: 1px solid lime;
+            z-index: 1000;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- DEBUG INFO -->
+    <div class="debug-info">
+        ✅ 10 CHECKBOXES LOADED<br>
+        ✅ PARROT VISIBLE<br>
+        ✅ EXTREME FIX MODE
+    </div>
+
+    <!-- Broken screen overlay -->
+    <div class="broken-screen"></div>
+
+    <!-- Glitch intro text -->
+    <div class="glitch-text">✅ EXTREME FIX: BEBROKAUH MODE ACTIVATED</div>
+
+    <!-- 10 CLEARLY VISIBLE BEBROKAUH CHECKBOXES -->
+    <div class="bebrokauh-container">
+        <span class="bebrokauh-label">🎯 BEBROKAUH CHECKLIST (10 TOTAL):</span>
+        
+        <div class="checkbox-row">
+            <input type="checkbox" class="bebrokauh-check" id="b1">
+            <label for="b1" style="color:cyan;">#1</label>
+            
+            <input type="checkbox" class="bebrokauh-check" id="b2">
+            <label for="b2" style="color:cyan;">#2</label>
+            
+            <input type="checkbox" class="bebrokauh-check" id="b3">
+            <label for="b3" style="color:cyan;">#3</label>
+            
+            <input type="checkbox" class="bebrokauh-check" id="b4">
+            <label for="b4" style="color:cyan;">#4</label>
+            
+            <input type="checkbox" class="bebrokauh-check" id="b5">
+            <label for="b5" style="color:cyan;">#5</label>
+        </div>
+        
+        <div class="checkbox-row">
+            <input type="checkbox" class="bebrokauh-check" id="b6">
+            <label for="b6" style="color:cyan;">#6</label>
+            
+            <input type="checkbox" class="bebrokauh-check" id="b7">
+            <label for="b7" style="color:cyan;">#7</label>
+            
+            <input type="checkbox" class="bebrokauh-check" id="b8">
+            <label for="b8" style="color:cyan;">#8</label>
+            
+            <input type="checkbox" class="bebrokauh-check" id="b9">
+            <label for="b9" style="color:cyan;">#9</label>
+            
+            <input type="checkbox" class="bebrokauh-check" id="b10">
+            <label for="b10" style="color:cyan;">#10</label>
+        </div>
+    </div>
+
+    <!-- SIMPLE BUT VISIBLE PARROT ART -->
+    <div class="parrot">
+        <div class="parrot-body">
+            <div class="parrot-head">
+                <div class="parrot-beak"></div>
+                <div class="parrot-eye"></div>
+            </div>
+            <div class="parrot-wing"></div>
+            <div class="parrot-tail"></div>
+        </div>
+    </div>
+
+    <!-- Footer with 10 H1 blah-blah texts -->
+    <footer>
+        <h1>✅ blah blah blah CHECKBOXES FIXED</h1>
+        <h1>✅ blah blah blah PARROT VISIBLE</h1>
+        <h1>✅ blah blah blah BEBROKAUH STABLE</h1>
+        <h1>✅ blah blah blah CSS ART EXTREME MODE</h1>
+        <h1>✅ blah blah blah 10 CHECKBOXES COUNTED</h1>
+        <h1>✅ blah blah blah WALUigi APPROVED</h1>
+        <h1>✅ blah blah blah AURA RECHARGED</h1>
+        <h1>✅ blah blah blah EYE BLEACHER 3000 ONLINE</h1>
+        <h1>✅ blah blah blah DESMOS COMPATIBLE</h1>
+        <h1>🎉 blah blah blah EXTREME FIX SUCCESS</h1>
+    </footer>
+
+    <script>
+        // Make checkboxes toggle effects
+        document.querySelectorAll('.bebrokauh-check').forEach((box, index) => {
+            box.addEventListener('change', function() {
+                if (this.checked) {
+                    this.style.accentColor = '#ff00ff';
+                    document.body.style.background = `rgba(${index * 25}, 0, ${index * 20}, 0.1)`;
+                } else {
+                    this.style.accentColor = 'cyan';
+                    document.body.style.background = 'black';
+                }
+            });
+        });
+
+        // Count checked boxes
+        function updateCount() {
+            const checked = document.querySelectorAll('.bebrokauh-check:checked').length;
+            document.querySelector('.bebrokauh-label').textContent = 
+                `🎯 BEBROKAUH CHECKLIST (${checked}/10 CHECKED):`;
+        }
+
+        document.querySelectorAll('.bebrokauh-check').forEach(box => {
+            box.addEventListener('change', updateCount);
+        });
+
+        // Auto-check first box to show it works
+        setTimeout(() => {
+            document.getElementById('b1').checked = true;
+            document.getElementById('b1').dispatchEvent(new Event('change'));
+        }, 500);
+    </script>
+</body>
+</html>
