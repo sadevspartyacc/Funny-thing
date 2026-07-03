@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>TextCloud</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>TextCloud</h1>
+    <nav>
+      <button id="tab-recent" class="tab active">Recent</button>
+      <button id="tab-search" class="tab">Search</button>
+      <button id="tab-submit" class="tab">Submit</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="view-recent" class="view">
+      <h2>Recent posts</h2>
+      <div id="recent-list" class="list">Loading…</div>
+    </section>
+
+    <section id="view-search" class="view hidden">
+      <h2>Search</h2>
+      <input id="search-input" placeholder="search username or text" />
+      <button id="search-btn">Search</button>
+      <div id="search-list" class="list"></div>
+    </section>
+
+    <section id="view-submit" class="view hidden">
+      <h2>Submit a post</h2>
+      <form id="submit-form">
+        <label>
+          Username
+          <input id="username" required maxlength="100" />
+        </label>
+        <label>
+          Text
+          <textarea id="text" required maxlength="1000"></textarea>
+        </label>
+        <button type="submit">Post</button>
+      </form>
+      <div id="submit-result" class="list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>All posts are stored permanently on the server.</small>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
